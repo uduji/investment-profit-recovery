@@ -1,0 +1,31 @@
+using System;
+using System.Security.Cryptography.X509Certificates;
+
+class Addition
+{
+    
+    static void Main(string[] args)
+    {
+        //the code calculates the number of months for a business
+        //to recover its investment and break even.
+        int investment;
+        int returns;
+        int expenses;
+        int profit;
+        int counter = 0;
+        for (investment = 1000, returns = 0; returns < investment;)
+        {
+            Console.WriteLine("Enter the monthly expenditure");
+            expenses = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the monthly profit");
+            profit = int.Parse(Console.ReadLine());
+            investment += expenses;
+            returns += profit;
+            counter++;
+
+        }
+        Console.WriteLine("Number of months to break even:" + counter);
+    }
+    
+   
+}
